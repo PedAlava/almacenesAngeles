@@ -1,0 +1,58 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+form{
+    padding-bottom: 20px;
+}
+#main-container{
+    margin: 0 auto;
+    width: 400px;
+}
+input[type="text"]{
+    padding: 10px;
+    width: 350px;
+}
+input[type="submit"]{
+    color: white;
+    background-color: rgba(18, 69, 163, 255);
+    padding: 10px;
+    border: 0;
+}
+#bDelete{
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border: 0;
+}
+
+#desarrolladores-container div{
+    padding: 10px;
+    box-shadow: 0px 3px 3px   #000000;
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+.tabla{
+    position: relative;
+    top: 10px;
+    left: 50px;
+    right:  50px;
+    width: 92%;
+}
+table {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border: #b2b2b2 1px solid;
+    box-shadow: 0px 3px 3px #000000 ;
+}
+thead{
+    background:gray;
+}
+td, th {
+    border: black 1px solid;
+} 
+tbody tr:hover{
+    background:gray;
+}

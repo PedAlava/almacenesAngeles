@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Clientes | Angeles</title>
+
+    <!-- Bootstrap 
+    <link href="cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">-->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- Datatables 
+    
+    <link href="vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+-->
+    <!-- Custom Theme Style -->
+    <link href="build/css/custom.min.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="/dashboard" class="site_title"><i class="fa fa-paw"></i> <span>Almacenes Angeles!</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Bienvenido,</span>
+                <h2><%= user.firstname %> <%= user.lastname %></h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                    <li><a><i class="fa fa-edit"></i> Articulos <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            
+                            <li><a href="form_advanced.html">Crear Articulos</a></li>
+                            <li><a href="/items">Listado de Articulos</a></li>
+                            
+                        </ul>
+                        </li>
+                  <li><a><i class="fa fa-group"></i> Clientes <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="/createCostumers">Crear Cliente</a></li>
+                      <li><a href="/costumer">Listado de Clientes</a></li>
+                      <li><a href="/zone">Zonas</a></li>
+                      <li><a href="/createZone">Crear Zonas</a></li>
+                      <!--<li><a href="index3.html">Dashboard3</a></li>-->
+                    </ul>
+                  </li>
+                  
+                  <li><a><i class="fa fa-desktop"></i> Ventas <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="">Solicitud de Credito</a></li>
+                      <li><a href="/invoices">Listado de Solicitudes</a></li>
+                    </ul>
+                  </li>
+<!--
+                  <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="tables.html">Tables</a></li>
+                      <li><a href="tables_dynamic.html">Table Dynamic</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="chartjs.html">Chart JS</a></li>
+                      <li><a href="chartjs2.html">Chart JS2</a></li>
+                      <li><a href="morisjs.html">Moris JS</a></li>
+                      <li><a href="echarts.html">ECharts</a></li>
+                      <li><a href="other_charts.html">Other Charts</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-clone"></i>Layouts <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
+                      <li><a href="fixed_footer.html">Fixed Footer</a></li>
+                    </ul>
+                  </li>
+                -->
+                </ul>
+              </div>
+              <!--
+              <div class="menu_section">
+                <h3>Live On</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="e_commerce.html">E-commerce</a></li>
+                      <li><a href="projects.html">Projects</a></li>
+                      <li><a href="project_detail.html">Project Detail</a></li>
+                      <li><a href="contacts.html">Contacts</a></li>
+                      <li><a href="profile.html">Profile</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-windows"></i> Extras <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="page_403.html">403 Error</a></li>
+                      <li><a href="page_404.html">404 Error</a></li>
+                      <li><a href="page_500.html">500 Error</a></li>
+                      <li><a href="plain_page.html">Plain Page</a></li>
+                      <li><a href="login.html">Login Page</a></li>
+                      <li><a href="pricing_tables.html">Pricing Tables</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-sitemap"></i> Multilevel Menu <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="#level1_1">Level One</a>
+                        <li><a>Level One<span class="fa fa-chevron-down"></span></a>
+                          <ul class="nav child_menu">
+                            <li class="sub_menu"><a href="level2.html">Level Two</a>
+                            </li>
+                            <li><a href="#level2_1">Level Two</a>
+                            </li>
+                            <li><a href="#level2_2">Level Two</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li><a href="#level1_2">Level One</a>
+                        </li>
+                    </ul>
+                  </li>                  
+                  <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
+                </ul>
+              </div>
+            -->
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+            <!--    
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+            -->
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="/logout">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+              <nav class="nav navbar-nav">
+              <ul class=" navbar-right">
+                <li class="nav-item dropdown open" style="padding-left: 15px;">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt=""><%= user.firstname %> <%= user.lastname %>
+                  </a>
+                  <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item"  href="javascript:;"> Profile</a>
+                      <a class="dropdown-item"  href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                  <a class="dropdown-item"  href="javascript:;">Help</a>
+                    <a class="dropdown-item"  href="/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                  </div>
+                </li>
+<!--
+                <li role="presentation" class="nav-item dropdown open">
+                  <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-green">6</span>
+                  </a>
+                  <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
+                    <li class="nav-item">
+                      <a class="dropdown-item">
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="dropdown-item">
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="dropdown-item">
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="dropdown-item">
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <div class="text-center">
+                        <a class="dropdown-item">
+                          <strong>See All Alerts</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+            -->
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Solicitud de Credito</h3>
+              </div>
+
+              
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Cabecera</h2>
+                        <ul class="nav navbar-right panel_toolbox">
+                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Settings 1</a>
+                                    <a class="dropdown-item" href="#">Settings 2</a>
+                                </div>
+                            </li><!--
+                            <li><a class="close-link"><i class="fa fa-close"></i></a>
+                            </li>-->
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                      <form class="" action="" method="post" novalidate>
+                         
+                          <span class="section">Información</span>
+                          <div class="field item form-group">
+                              <label class="col-form-label col-md-3 col-sm-3  label-align">Solicitante<span class="required">*</span></label>
+                              <div class="col-md-6 col-sm-6">
+                                  <input class="form-control" data-validate-length-range="5,100"  name="name" placeholder="Pedro Alava" required="required" />
+                              </div>
+                          </div>
+                          <div class="field item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3  label-align">Cedula<span class="required">*</span></label>
+                            <div class="col-md-6 col-sm-6">
+                                <input class="form-control" type="number" class='number' name="cedula" data-validate-minmax="10,9999999999" required='required'></div>
+                        </div>
+                        <div class="field item form-group">
+                          <label class="col-form-label col-md-3 col-sm-3  label-align">Dirección<span class="required">*</span></label>
+                          <div class="col-md-6 col-sm-6">
+                              <input class="form-control" data-validate-length-range="5,100"  name="direccion" placeholder="Norte" required="required" />
+                          </div>
+                      </div>
+                      <div class="field item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3  label-align">Empresa donde trabaja<span class="required">*</span></label>
+                        <div class="col-md-6 col-sm-6">
+                            <input class="form-control" data-validate-length-range="5,100"  name="empresa" placeholder="Plasti" required="required" />
+                        </div>
+                    </div>
+                    <div class="field item form-group">
+                      <label class="col-form-label col-md-3 col-sm-3  label-align">Direccion de la empresa<span class="required">*</span></label>
+                      <div class="col-md-6 col-sm-6">
+                          <input class="form-control" data-validate-length-range="5,100"  name="dirEmpresa" placeholder="Portete" required="required" />
+                      </div>
+                  </div>
+                    <div class="field item form-group">
+                      <label class="col-form-label col-md-3 col-sm-3  label-align">Ingreso Mensual<span class="required">*</span></label>
+                      <div class="col-md-6 col-sm-6">
+                        <input class="form-control" type="number"  class='number' placeholder="0.00"  name="i_mensual" min="0"  data-validate-minmax="10,9000" step="0.01" required='required'  title="Ingreso Mensual" pattern="^\d+(?:\.\d{1,2})?$" onblur="
+                        this.parentNode.parentNode.style.backgroundColor=/^\d+(?:\.\d{1,2})?$/.test(this.value)?'inherit':'red'
+                        "></div>
+                     </div>
+                          <div class="field item form-group">
+                              <label class="col-form-label col-md-3 col-sm-3  label-align">email<span class="required">*</span></label>
+                              <div class="col-md-6 col-sm-6">
+                                  <input class="form-control" name="email" class='email' required="required" type="email" /></div>
+                          </div>
+                          
+                          <div class="field item form-group">
+                              <label class="col-form-label col-md-3 col-sm-3  label-align">Fecha<span class="required">*</span></label>
+                              <div class="col-md-6 col-sm-6">
+                                  <input class="form-control" class='date' type="date" name="date" required='required'></div>
+                          </div>
+                          <div class="field item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3  label-align">Zona<span class="required">*</span></label>
+                            <div class="col-md-6 col-sm-6">
+                              <select class="form-control" name="Zona" id="">
+                                <option value="1" >1</option>
+                                <option value="2" >2</option>
+                                <option value="3" >3</option>
+                              </select>
+                            </div>
+                        </div>
+                          
+                          <div class="ln_solid">
+                              <div class="form-group">
+                                  <div class="col-md-6 offset-md-3">
+                                      <button type='submit' class="btn btn-primary">Submit</button>
+                                      <button type='reset' class="btn btn-success">Reset</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </form>
+                  </form>
+                    </div>
+                </div>
+              </div>
+        
+           
+              <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="myModalLabel">Cuotas</h4>
+                      <!--<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                      </button>-->
+                    </div>
+                    <div class="modal-body">
+                     <center><h4>Cuotas de la solicitud</h4></center> 
+                     <table class="table table-bordered table-hover" id="tab_installments">
+                      <thead>
+                        <tr>
+                          <th class="text-center"> # </th>
+                          <th class="text-center"> Fecha </th>
+                          <th class="text-center"> Cuota </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr >
+                          <td>1</td>
+                          
+                          <td><input type="date" name='date[]' placeholder='Fecha de Cuota' class="form-control dateC" /></td>
+                          <td><input type="number" name='pricesC[]' placeholder='Cuota' class="form-control pricesC" step="0.00" min="0"/></td>
+                        </tr>
+                        <tr >
+                          <td>2</td>
+                          
+                          <td><input type="date" name='date[]' placeholder='Fecha de Cuota' class="form-control dateC" /></td>
+                          <td><input type="number" name='pricesC[]' placeholder='Cuota' class="form-control pricesC" step="0.00" min="0"/></td>
+                        </tr>                        <tr >
+                          <td>3</td>
+                          
+                          <td><input type="date" name='date[]' placeholder='Fecha de Cuota' class="form-control dateC" /></td>
+                          <td><input type="number" name='pricesC[]' placeholder='Cuota' class="form-control pricesC" step="0.00" min="0"/></td>
+                        </tr>                        <tr >
+                          <td>4</td>
+                          
+                          <td><input type="date" name='date[]' placeholder='Fecha de Cuota' class="form-control dateC" /></td>
+                          <td><input type="number" name='pricesC[]' placeholder='Cuota' class="form-control pricesC" step="0.00" min="0"/></td>
+                        </tr>                        <tr >
+                          <td>5</td>
+                          
+                          <td><input type="date" name='date[]' placeholder='Fecha de Cuota' class="form-control dateC" /></td>
+                          <td><input type="number" name='pricesC[]' placeholder='Cuota' class="form-control pricesC" step="0.00" min="0"/></td>
+                        </tr>                        <tr >
+                          <td>6</td>
+                          
+                          <td><input type="date" name='date[]' placeholder='Fecha de Cuota' class="form-control dateC" /></td>
+                          <td><input type="number" name='pricesC[]' placeholder='Cuota' class="form-control pricesC" step="0.00" min="0"/></td>
+                        </tr>                        <tr >
+                          <td>6</td>
+                          
+                          <td><input type="date" name='date[]' placeholder='Fecha de Cuota' class="form-control dateC" /></td>
+                          <td><input type="number" name='pricesC[]' placeholder='Cuota' class="form-control pricesC" step="0.00" min="0"/></td>
+                        </tr>                        <tr >
+                          <td>7</td>
+                          
+                          <td><input type="date" name='date[]' placeholder='Fecha de Cuota' class="form-control dateC" /></td>
+                          <td><input type="number" name='pricesC[]' placeholder='Cuota' class="form-control pricesC" step="0.00" min="0"/></td>
+                        </tr>                        <tr >
+                          <td>8</td>
+                          
+                          <td><input type="date" name='date[]' placeholder='Fecha de Cuota' class="form-control dateC" /></td>
+                          <td><input type="number" name='pricesC[]' placeholder='Cuota' class="form-control pricesC" step="0.00" min="0"/></td>
+                        </tr>                        <tr >
+                          <td>9</td>
+                          
+                          <td><input type="date" name='date[]' placeholder='Fecha de Cuota' class="form-control dateC" /></td>
+                          <td><input type="number" name='pricesC[]' placeholder='Cuota' class="form-control pricesC" step="0.00" min="0"/></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                      </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                      <button type="button" id="inst" class="btn btn-primary">Si</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Detalle Articulos</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Settings 1</a>
+                            <a class="dropdown-item" href="#">Settings 2</a>
+                          </div>
+                      </li>
+                      <!--<li><a class="close-link"><i class="fa fa-close"></i></a>
+                      </li>-->
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                      <div class="row">
+                          <div class="col-sm-12">
+                            <div class="card-box table-responsive">
+                              <!--<p class="text-muted font-13 m-b-30">
+                                Responsive is an extension for DataTables that resolves that problem by optimising the table's layout for different screen sizes through the dynamic insertion and removal of columns from the table.
+                              </p>-->
+                              <table class="table table-bordered table-hover" id="tab_logic">
+                                <thead>
+                                  <tr>
+                                    <th class="text-center"> # </th>
+                                    <th class="text-center"> Producto </th>
+                                    <th class="text-center"> Cantidad </th>
+                                    <th class="text-center"> Precio </th>
+                                    <th class="text-center"> Total </th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr id='addr0'>
+                                    <td>1</td>
+                                    <td><input type="text" name='product[]'  placeholder='Producto' class="form-control"/></td>
+                                    <td><input type="number" name='qty[]' placeholder='Cantidad' class="form-control qty" step="0" min="0"/></td>
+                                    <td><input type="number" name='price[]' placeholder='Precio Unitario' class="form-control prices" step="0.00" min="0"/></td>
+                                    <td><input type="number" name='total[]' placeholder='0.00' class="form-control total" readonly/></td>
+                                  </tr>
+                                  <tr id='addr1'></tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="row ">
+                        <div class="col-md-12">
+                          <button id="add_row" class="btn btn-primary pull-left">Añadir Producto</button>
+                          <button id="installments" class="btn btn-warning pull-left" data-toggle="modal" data-target=".bs-example-modal-lg">Cuotas</button>
+                          <button id='delete_row' class="pull-right btn btn-danger">Eliminar Producto</button>
+                        </div>
+                      </div>
+                      <div class="row clearfix" style="margin-top:20px">
+                        <div class="pull-right col-md-4">
+                          <table class="table table-bordered table-hover" id="tab_logic_total">
+                            <tbody>
+                              <tr>
+                                <th class="text-center">Sub Total</th>
+                                <td class="text-center"><input type="number" name='sub_total' placeholder='0.00' class="form-control" id="sub_total" readonly/></td>
+                              </tr>
+                              <tr>
+                                <th class="text-center">Iva</th>
+                                <td class="text-center"><div class="input-group mb-2 mb-sm-0">
+                                    <input type="number" class="form-control" id="tax" placeholder="0">
+                                    <div class="input-group-addon">%</div>
+                                  </div></td>
+                              </tr>
+                              <tr>
+                                <th class="text-center">Iva %</th>
+                                <td class="text-center"><input type="number" name='tax_amount' id="tax_amount" placeholder='0.00' class="form-control" readonly/></td>
+                              </tr>
+                              <tr>
+                                <th class="text-center">Total</th>
+                                <td class="text-center"><input type="number" name='total_amount' id="total_amount" placeholder='0.00' class="form-control" readonly/></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Almacenes Angeles - PA 
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+   <script src="vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- FastClick -->
+    <script src="vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="vendors/nprogress/nprogress.js"></script>
+    <!-- iCheck -->
+    <script src="vendors/iCheck/icheck.min.js"></script>
+    <!-- Datatables
+    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="vendors/jszip/dist/jszip.min.js"></script>
+    <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+  -->
+     <!-- Javascript functions
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="vendors/validator/multifield.js"></script>
+    <script src="vendors/validator/validator.js"></script>	-->
+	<script>
+    function alertas(){
+      alert("x");
+    }
+		function hideshow(){
+			var password = document.getElementById("password1");
+			var slash = document.getElementById("slash");
+			var eye = document.getElementById("eye");
+			
+			if(password.type === 'password'){
+				password.type = "text";
+				slash.style.display = "block";
+				eye.style.display = "none";
+			}
+			else{
+				password.type = "password";
+				slash.style.display = "none";
+				eye.style.display = "block";
+			}
+
+		}
+	</script>
+
+    <script>
+        // initialize a validator instance from the "FormValidator" constructor.
+        // A "<form>" element is optionally passed as an argument, but is not a must
+        var validator = new FormValidator({
+            "events": ['blur', 'input', 'change']
+        }, document.forms[0]);
+        // on form "submit" event
+        document.forms[0].onsubmit = function(e) {
+            var submit = true,
+                validatorResult = validator.checkAll(this);
+            console.log(validatorResult);
+            return !!validatorResult.valid;
+        };
+        // on form "reset" event
+        document.forms[0].onreset = function(e) {
+            validator.reset();
+        };
+        // stuff related ONLY for this demo page:
+        $('.toggleValidationTooltips').change(function() {
+            validator.settings.alerts = !this.checked;
+            if (this.checked)
+                $('form .alert').remove();
+        }).prop('checked', false);
+
+    </script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="build/js/custom.min.js"></script>
+    <script>$(document).ready(function(){
+      $("#inst").click( function(){
+        console.log("aq");
+        $("#modal").modal('hide');
+
+      });
+      var i=1;
+      $("#add_row").click(function(){b=i-1;
+          $('#addr'+i).html($('#addr'+b).html()).find('td:first-child').html(i+1);
+          $('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+          i++; 
+      });
+      $("#delete_row").click(function(){
+        if(i>1){
+      $("#addr"+(i-1)).html('');
+      i--;
+      }
+      calc();
+    });
+    
+    $('#tab_logic tbody').on('keyup change',function(){
+      calc();
+    });
+    $('#tax').on('keyup change',function(){
+      calc_total();
+    });
+    
+  
+  });
+  
+  function calc()
+  {
+    $('#tab_logic tbody tr').each(function(i, element) {
+      var html = $(this).html();
+      if(html!='')
+      {
+        var qty = $(this).find('.qty').val();
+        var price = $(this).find('.prices').val();
+        $(this).find('.total').val(qty*price);
+        
+        calc_total();
+      }
+      });
+  }
+  
+  function calc_total()
+  {
+    total=0;
+    $('.total').each(function() {
+          total += parseInt($(this).val());
+      });
+    $('#sub_total').val(total.toFixed(2));
+    tax_sum=total/100*$('#tax').val();
+    $('#tax_amount').val(tax_sum.toFixed(2));
+    $('#total_amount').val((tax_sum+total).toFixed(2));
+  }</script>
+  </body>
+</html>
